@@ -1,4 +1,4 @@
-package com.interview.algorithms;
+package com.interview.algorithms.array;
 
 /**
  * Write an algorithm such that if an element in an MxN matrix is 0, its entire

@@ -1,4 +1,4 @@
-package com.interview.algorithms;
+package com.interview.algorithms.array;
 
 public class MergeSortedArraysUsingHeap {
 

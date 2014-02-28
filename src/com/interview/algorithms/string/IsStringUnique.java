@@ -1,4 +1,4 @@
-package com.interview.algorithms;
+package com.interview.algorithms.string;
 
 public class IsStringUnique {
 	public static void main(String[] args) {
