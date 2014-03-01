@@ -1,4 +1,4 @@
-package com.interview.algorithms.binaryTree;
+package com.interview.algorithms.tree;
 
 //TreeList.java
 /*

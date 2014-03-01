@@ -1,4 +1,4 @@
-package com.interview.algorithms.linkedList;
+package com.interview.algorithms.linkedlist;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -1,4 +1,4 @@
-package com.interview.algorithms.linkedList;
+package com.interview.algorithms.linkedlist;
 
 public class ReversingLinkedList {
 	

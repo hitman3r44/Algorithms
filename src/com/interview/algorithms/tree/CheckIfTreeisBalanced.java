@@ -1,4 +1,4 @@
-package com.interview.algorithms.binaryTree;
+package com.interview.algorithms.tree;
 
 import com.example.datastructures.node.BinaryNode;
 
