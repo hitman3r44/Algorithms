@@ -1,4 +1,4 @@
-package com.interview.algorithms;
+package com.interview.algorithms.linkedlist;
 
 import com.example.datastructures.node.Node;
 /**
