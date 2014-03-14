@@ -5,6 +5,8 @@ public class Factorial {
 	public void generateFactorial(int kth) {
 		System.out.println("Factoial for " + kth + "  no is : "
 				+ recFactorial(kth));
+		System.out.println("Factoial for " + kth + "  no is : "
+				+ itertaiveFactorial(kth));
 
 	}
 
@@ -21,10 +23,29 @@ public class Factorial {
 
 	}
 
+	int itertaiveFactorial(int n) {
+		if (n < 0)
+			return -1; // Error condition.
+
+		if (n == 0)
+			return 0;
+
+		int a = 1, b = 1;
+
+		for (int i = 3; i <= n; i++) {
+			int c = a + b;
+			a = b;
+			b = c;
+		}
+		
+		return b;
+	}
+
 	public static void main(String[] args) {
 
 		Factorial factorial = new Factorial();
 		factorial.generateFactorial(5);
+		
 
 	}
 

@@ -12,7 +12,7 @@ import java.util.Arrays;
 public class MergeTwoSortedArrays {
 	public static void main(String[] args) {
 		int big[] = new int[20];
-		int small[] = new int[] { 5, 10, 20, 30, 40 };
+		int small[] = new int[] { 2,3,4,5,10};
 
 		for (int i = 0; i < 15; i++) {
 			big[i] = i;
@@ -26,6 +26,8 @@ public class MergeTwoSortedArrays {
 
 		merge(big, small, 15, 5);
 
+		System.out.println();
+		System.out.println();
 		printArray(big);
 
 	}
@@ -42,17 +44,24 @@ public class MergeTwoSortedArrays {
 
 		// Start comparing from the last element and merge a and b
 		while (bigIndex >= 0 && smallIndex >= 0) {
-			if (big[bigIndex] > small[smallIndex]) {
+			if (big[bigIndex] > small[smallIndex] && big[totalIndex] != big[bigIndex]) {
 				big[totalIndex--] = big[bigIndex--];
 				printArray(big);
-			} else {
+			} else if(big[totalIndex] != small[smallIndex]){
 				big[totalIndex--] = small[smallIndex--];
 				printArray(big);
 			}
 		}
-
+		
+		System.out.println("while (smallIndex >= 0)");
+		
 		while (smallIndex >= 0) {
 			big[totalIndex--] = small[smallIndex--];
+		}
+		
+		System.out.println("while (bigIndex >= 0)");
+		while (bigIndex >= 0) {
+			big[totalIndex--] = big[bigIndex--];
 		}
 	}
 }
