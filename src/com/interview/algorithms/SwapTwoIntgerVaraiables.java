@@ -1,6 +1,5 @@
 package com.interview.algorithms;
 
-import java.util.Arrays;
 
 public class SwapTwoIntgerVaraiables {
 

@@ -1,13 +1,9 @@
 package com.interview.algorithms.graph;
 
-import java.util.LinkedList;
-
-import com.example.datastructures.graph.Graph;
-import com.example.datastructures.node.Node;
 
 /**
  * Given a directed graph, design an algorithm to find out whether there is a
- * route be- tween two nodes.
+ * route between two nodes.
  * 
  * @author ajitkoti
  *
@@ -18,7 +14,7 @@ public class FindRouteBetweenNodes {
 //	 * This problem can be solved by just simple graph traversal, such as depth
 //	 * first search or breadth first search. We start with one of the two nodes
 //	 * and, during traversal, check if the other node is found. We should mark
-//	 * any node found in the course of the algorithm as ‘al- ready visited’ to
+//	 * any node found in the course of the algorithm as ‘already visited’ to
 //	 * avoid cycles and repetition of the nodes
 //	 * 
 //	 * @param g

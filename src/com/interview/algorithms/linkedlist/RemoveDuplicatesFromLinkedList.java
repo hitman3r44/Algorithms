@@ -52,19 +52,16 @@ public class RemoveDuplicatesFromLinkedList {
 			return;
 
 		Node previous = root;
-
 		Node current = previous.getNextNode();
 
 		while (current != null) {
-
 			Node runner = root;
 
 			while (runner != current) { // Check for earlier dups
 
 				if (runner.getData() == current.getData()) {
 					previous.setNextNode(current.getNextNode());
-					current = current.getNextNode(); // update current to next
-														// node
+					current = current.getNextNode(); // update current to next node
 					break; // all other dups have already been removed
 				}
 				runner = runner.getNextNode();

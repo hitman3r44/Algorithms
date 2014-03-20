@@ -62,9 +62,7 @@ public class IsASubTree {
 		if (r1.getData() != r2.getData())
 			return false; // data doesn’t match
 
-		return (matchTree(r1.getLeftChild(), r2.getLeftChild()) &&
-
-		matchTree(r1.getRightChild(), r2.getRightChild()));
+		return (matchTree(r1.getLeftChild(), r2.getLeftChild()) &&	matchTree(r1.getRightChild(), r2.getRightChild()));
 
 	}
 }

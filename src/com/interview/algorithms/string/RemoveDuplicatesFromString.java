@@ -3,7 +3,7 @@ package com.interview.algorithms.string;
 public class RemoveDuplicatesFromString {
 
 	public static void main(String[] args) {
-		char[] str = new char[]{'a','d','c','d','x','d'};
+		char[] str = new char[]{'a','a','c'};
 		System.out.println(removeDuplicates(str));
 
 	}

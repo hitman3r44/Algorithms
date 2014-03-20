@@ -65,6 +65,7 @@ public class FindIntersectionPointOfTwoLinkedLists {
 				return null;
 			}
 			currentNode1 = currentNode1.getNextNode();
+			diff--;
 		}
 
 		while (currentNode1 != null && currentNode2 != null) {

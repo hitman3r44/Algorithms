@@ -13,7 +13,7 @@ public class FindNumberOfIslands {
 			{ 1, 0, 0, 0, 0, 0, 0, 1 } };
 
 	/**
-	 * a[x][y] == 1) then its not visited 
+	 * a[x][y] == 1 then its not visited 
 	 * @param a
 	 * @param x
 	 * @param y

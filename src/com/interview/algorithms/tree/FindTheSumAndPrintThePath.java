@@ -27,9 +27,7 @@ public class FindTheSumAndPrintThePath {
 	 * 
 	 * Well, if a node is at level r, we do r amount of work (that’s in the
 	 * looking “up” step). We can take a guess at O(n lg n) (n nodes, doing an
-	 * average of lg n amount of work on each step), or we can be super
-	 * mathematical:
-	 * 
+	 * average of lg n amount of work on each step)
 	 * @param head
 	 * @param sum
 	 * @param buffer

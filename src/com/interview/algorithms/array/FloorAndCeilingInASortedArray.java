@@ -52,7 +52,7 @@ public class FloorAndCeilingInASortedArray {
 		 * If x is greater than arr[mid], then either arr[mid + 1] is ceiling of
 		 * x or ceiling lies in arr[mid+1...high]
 		 */
-		else if (arr[mid] < x) {
+		else if (x > arr[mid]) {
 			if (mid + 1 <= high && x <= arr[mid + 1])
 				return mid + 1;
 			else
@@ -75,7 +75,7 @@ public class FloorAndCeilingInASortedArray {
 	public static void main(String[] args) {
 		int arr[] = { 1, 2, 8, 10, 10, 12, 19 };
 		int n = arr.length;
-		int x = 20;
+		int x = 11;
 		int index = ceilSearch(arr, 0, n - 1, x);
 		if (index == -1)
 			System.out.println("Ceiling of doesn't exist in array " + x);

@@ -1,5 +1,10 @@
 package com.interview.algorithms.graph;
 
+/**
+ * http://www.geeksforgeeks.org/find-number-of-islands/
+ * @author ajitkoti
+ *
+ */
 public class FindNumberOfIslandsUsingDFS {
    
 
@@ -12,7 +17,7 @@ public class FindNumberOfIslandsUsingDFS {
     }
 
     private static void dfs(int row, int col, int[][] m, boolean[][] visited) {
-        visited[row][col] = true;
+        visited[row][col] = true; // make it visited 
         for (Direction direction : Direction.values()) {
             int newRow = row + direction.getRowDelta();
             int newCol = col + direction.getColDelta();

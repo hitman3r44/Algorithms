@@ -7,8 +7,8 @@ import com.example.datastructures.node.BinaryNode;
  * Given a Balanced Binary Search Tree and a target sum, write a function that
  * returns true if there is a pair with sum equals to target sum, otherwise
  * return false. Expected time complexity is O(n) and only O(Logn) extra space
- * can be used. Any modification to Binary Search Tree is not allowed. Note that
- * height of a Balanced BST is always O(Logn).
+ * can be used. Any modification to Binary Search Tree is not allowed.
+ *  Note that height of a Balanced BST is always O(Logn).
  * 
  * http://www.geeksforgeeks.org/find-a-pair-with-given-sum-in-bst/
  * 
@@ -19,9 +19,8 @@ public class FindAPairWithGivenSumInBST {
 
 	/**
 	 * The solution discussed below takes O(n) time, O(Logn) space and doesn’t
-	 * modify BST. The idea is same as finding the pair in sorted array (See
-	 * method 1 of this for details). We traverse BST in Normal Inorder and
-	 * Reverse Inorder simultaneously. In reverse inorder, we start from the
+	 * modify BST. The idea is same as finding the pair in sorted array.
+	 * We traverse BST in Normal Inorder and Reverse Inorder simultaneously. In reverse inorder, we start from the
 	 * rightmost node which is the maximum value node. In normal inorder, we
 	 * start from the left most node which is minimum value node. We add sum of
 	 * current nodes in both traversals and compare this sum with given target

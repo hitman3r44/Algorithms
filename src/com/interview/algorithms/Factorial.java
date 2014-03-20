@@ -12,40 +12,34 @@ public class Factorial {
 
 	private int recFactorial(int n) {
 		if (n <= 0) {
-
 			return 1;
 
 		} else {
-			int fac = n * recFactorial(n - 1);
-			System.out.print(fac + ",");
-			return fac;
+			return n * recFactorial(n - 1);
+			// System.out.print(fac + ",");
+			// return fac;
 		}
 
 	}
 
-	int itertaiveFactorial(int n) {
-		if (n < 0)
-			return -1; // Error condition.
-
-		if (n == 0)
-			return 0;
-
-		int a = 1, b = 1;
-
-		for (int i = 3; i <= n; i++) {
-			int c = a + b;
-			a = b;
-			b = c;
+	private long itertaiveFactorial(int num) {
+		long result = 1;
+		if (num == 0) {
+			return 1;
+		} else {
+			for (int i = 2; i <= num; i++) {
+				result *= i;
+			}
+			return result;
 		}
-		
-		return b;
+
 	}
+
+
 
 	public static void main(String[] args) {
-
 		Factorial factorial = new Factorial();
-		factorial.generateFactorial(5);
-		
+		factorial.generateFactorial(5);		
 
 	}
 

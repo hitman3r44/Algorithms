@@ -1,8 +1,6 @@
 package com.interview.algorithms;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 public class MinDiffNumbers {
 
@@ -24,8 +22,7 @@ public class MinDiffNumbers {
 		}
 		int smallerNumber = arr[minIdex];
 		int largerNumber = arr[minIdex+ 1];
-		System.out.println("The minimum difference is: " + largerNumber + "-"
-				+ smallerNumber + "=" + min);
+		System.out.println("The minimum difference is: " + largerNumber + "-"+ smallerNumber + "=" + min);
 
 	}
 
