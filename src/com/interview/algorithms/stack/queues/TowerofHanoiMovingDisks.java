@@ -25,6 +25,7 @@ public class TowerofHanoiMovingDisks {
 
 		towers[0].moveDisks(n, towers[2], towers[1]);
 	}
+	
 
 }
 
@@ -54,7 +55,7 @@ class Tower {
 	private int index;
 
 	public Tower(int i) {
-		disks = new Stack<Integer>(i);
+		disks = new Stack<Integer>(10);
 		index = i;
 	}
 

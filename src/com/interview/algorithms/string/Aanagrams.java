@@ -14,21 +14,23 @@ public class Aanagrams {
 		char temp;
 		int in;
 		int length = str.length();
+		char[] chars = str.toCharArray();
 
 		// start the outer loop at 1 so would be compared with previous 0
 		for (int out = 1; out < length; out++) {
-			temp = str.charAt(out); // copy into temp , later insert at the
+			temp = chars[out]; // copy into temp , later insert at the
 									// correct empty position
 			in = out;
-			while (in > 0 && str.charAt(in - 1) >= temp) {
+			while (in > 0 && chars[in - 1] >= temp) {
 				// shift the elements if they are greater than temp
-				str = str.replace(str.charAt(in), str.charAt(in - 1));
+				chars[in] = chars[in - 1];
 				--in;
 			}
 			// insert at the correct empty position after all shifts done
-
-			str = str.replace(str.charAt(in), str.charAt(out));
+			chars[in] =temp;
+			
 		}
+		str = new String(chars);
 		
 		System.out.println(str);
 		return str;
