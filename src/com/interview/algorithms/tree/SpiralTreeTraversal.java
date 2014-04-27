@@ -13,28 +13,29 @@ public class SpiralTreeTraversal {
 
 	/* Function to print level order traversal a tree */
 	void printLevelOrder(BinaryNode root) {
-		boolean ltr = false;
+		boolean leftToRight = false;
 		int h = height(root);
 		int i;
 		for (i = 1; i <= h; i++)
-			printGivenLevel(root, i, ltr);
+			printGivenLevel(root, i, leftToRight);
 		/* Revert ltr to traverse next level in oppposite order */
-		ltr = !ltr;
+		leftToRight = !leftToRight;
 	}
 
 	/* Print nodes at a given level */
-	void printGivenLevel(BinaryNode root, int level, boolean ltr) {
+	void printGivenLevel(BinaryNode root, int level, boolean leftToRight) {
 		if (root == null)
 			return;
 		if (level == 1)
 			System.out.println(root.getData() + ",");
 		else if (level > 1) {
-			if (ltr) {
-				printGivenLevel(root.getLeftChild(), level - 1, ltr);
-				printGivenLevel(root.getRightChild(), level - 1, ltr);
+			if (leftToRight) {
+				printGivenLevel(root.getLeftChild(), level - 1, leftToRight);
+				printGivenLevel(root.getRightChild(), level - 1, leftToRight);
 			} else {
-				printGivenLevel(root.getLeftChild(), level - 1, ltr);
-				printGivenLevel(root.getRightChild(), level - 1, ltr);
+				printGivenLevel(root.getRightChild(), level - 1, leftToRight);
+				printGivenLevel(root.getLeftChild(), level - 1, leftToRight);
+				
 			}
 		}
 	}
@@ -43,20 +44,10 @@ public class SpiralTreeTraversal {
 	 * Compute the "height" of a tree -- the number of nodes along the longest
 	 * path from the root node down to the farthest leaf node.
 	 */
-	int height(BinaryNode node) {
-		if (node == null)
-			return 0;
-		else {
-			/* compute the height of each subtree */
-			int lheight = height(node.getLeftChild());
-			int rheight = height(node.getRightChild());
-
-			/* use the larger one */
-			if (lheight > rheight)
-				return (lheight + 1);
-			else
-				return (rheight + 1);
-		}
-	}
+	int height(BinaryNode root) {
+		if(root == null )
+	       return 0;
+	   return 1+Math.max(height(root.getLeftChild()), height(root.getRightChild()));
+	   }
 
 }

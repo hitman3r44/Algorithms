@@ -3,11 +3,10 @@ package com.interview.algorithms.tree;
 import com.example.datastructures.node.BinaryNode;
 
 /**
- * Write an algorithm to find the ‘next’ node (e.g., in-order successor) of a
- * given node in a binary search tree where each node has a link to its parent
+ * http://www.geeksforgeeks.org/inorder-successor-in-binary-search-tree/
  * 
  * @author ajitkoti
- *
+ * 
  */
 public class InOrderSuccessor {
 
@@ -16,45 +15,43 @@ public class InOrderSuccessor {
 	}
 
 	/**
-	 * On an in-order traversal, we visit X.left, then X, then X.right. So, if
-	 * we want to find X.successor(), we do the following:
+	 * The Algorithm is divided into two cases on the basis of right subtree of
+	 * the input node being empty or not.
 	 * 
-	 *  1. If X has a right child, then the successor must be on the right side of X (because of the
-	 * order in which we visit nodes). Specifically, the left-most child must be
-	 * the first node visited in that subtree. 
+	 * Input: node, root node is the node whose Inorder successor is needed.
+	 * output:succ is Inorder successor of node.
 	 * 
-	 * 2. Else, we go to X’s parent (call it P). 
+	 * 1) If right subtree of node is not NULL, then succ lies in right subtree.
+	 * Do following. Go to right subtree and return the node with minimum key
+	 * value in right subtree.
 	 * 
-	 * 2.a. If X was a left child (P.left = X), then P is the successor of X
-	 * 
-	 *  2.b. If X was a right child (P.right = X), then we have fully visited P, so we call successor(P)
+	 * 2) If right subtree of node is NULL, then start from root and use search
+	 * like technique. Do following. Travel down the tree, if a node’s data is
+	 * greater than root’s data then go right side, otherwise go to left side.
 	 * 
 	 * @param currentNode
 	 * @param parentNode
 	 * @return
 	 */
-	public static BinaryNode inorderSucc(BinaryNode currentNode, BinaryNode parentNode) {
+	public static BinaryNode inorderSucc(BinaryNode currentNode, BinaryNode root) {
+		// step 1 of the above algorithm
+		if (currentNode.hasrightChild())
+			return leftMostChild(currentNode.getRightChild());
 
-		if (currentNode != null) {
-			BinaryNode p;
+		BinaryNode succ = null;
 
-			// Found right children -> return 1st inorder node on right
-			if (parentNode == null || currentNode.getRightChild() != null) {
-				p = leftMostChild(currentNode.getRightChild());
-			} else {
-				// Go up until we’re on left instead of right (case 2b)
-				while ((p = parentNode) != null) {
-					if (p.getLeftChild() == currentNode) {
-						break;
-					}
-
-					currentNode = p;
-				}
-			}
-			return p;
+		// Start from root and search for successor down the tree
+		while (root != null) {
+			if (currentNode.getData() < root.getData()) {
+				succ = root;
+				root = root.getLeftChild();
+			} else if (currentNode.getData() > root.getData())
+				root = root.getRightChild();
+			else
+				break;
 		}
 
-		return null;
+		return succ;
 	}
 
 	public static BinaryNode leftMostChild(BinaryNode e) {

@@ -1,10 +1,13 @@
 package com.interview.algorithms.linkedlist;
 
 import com.example.datastructures.node.Node;
-
+/**
+ * http://www.mytechinterviews.com/reverse-a-linked-list
+ * @author ajitkoti
+ *
+ */
 public class ReversingLinkedList {
 
-	// http://www.mytechinterviews.com/reverse-a-linked-list
 
 	public Node reverse(Node current) {
 		Node temp;

@@ -18,7 +18,7 @@ import com.example.datastructures.node.TrieNode;
 public class FindTheKMostFrequentWords {
 
 	public void top(Scanner scanner, int top) {
-		Trie trie = new Trie();
+		Trie trie =	 new Trie();
 		for (; scanner.hasNext();) {
 			String s = scanner.next();
 			trie.insert(s);

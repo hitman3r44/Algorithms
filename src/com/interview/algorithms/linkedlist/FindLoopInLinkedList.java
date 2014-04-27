@@ -55,7 +55,7 @@ public class FindLoopInLinkedList {
 			forward = forward.getNextNode();
 		}
 
-		// Now n2 points to the start of the loop.
+		// Now forward points to the start of the loop.
 		return forward;
 	}
 

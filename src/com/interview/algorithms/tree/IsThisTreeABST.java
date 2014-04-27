@@ -9,8 +9,7 @@ import com.example.datastructures.node.BinaryNode;
  * contains only nodes with keys greater than the node’s key. • Both the left
  * and right subtrees must also be binary search trees.
  * 
- * http://www.geeksforgeeks.org/a-program-to-check-if-a-binary-tree-is-bst-or-
- * not/
+ * http://www.geeksforgeeks.org/a-program-to-check-if-a-binary-tree-is-bst-or-not/
  * 
  * @author ajitkoti
  * 

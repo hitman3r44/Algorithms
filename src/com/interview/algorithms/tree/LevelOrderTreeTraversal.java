@@ -10,6 +10,7 @@ import com.example.datastructures.node.BinaryNode;
  * 
  */
 public class LevelOrderTreeTraversal {
+	
 	/* Function to print level order traversal a tree */
 	void printLevelOrder(BinaryNode root) {
 		int h = height(root);
@@ -34,20 +35,9 @@ public class LevelOrderTreeTraversal {
 	 * Compute the "height" of a tree -- the number of nodes along the longest
 	 * path from the root node down to the farthest leaf node.
 	 */
-	int height(BinaryNode node) {
-		if (node == null)
-			return 0;
-		else {
-			/* compute the height of each subtree */
-			int lheight = height(node.getLeftChild());
-			int rheight = height(node.getRightChild());
-
-			/* use the larger one */
-			if (lheight > rheight)
-				return (lheight + 1);
-			else
-				return (rheight + 1);
-		}
-	}
-
+	int height(BinaryNode root) {
+		if(root == null )
+	       return 0;
+	   return 1+Math.max(height(root.getLeftChild()), height(root.getRightChild()));
+	   }
 }

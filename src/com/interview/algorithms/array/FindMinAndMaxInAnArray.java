@@ -29,13 +29,7 @@ public class FindMinAndMaxInAnArray {
 				max = arr[1];
 			}
 			i = 2; /* set the startung index for loop */
-		}
-
-		/*
-		 * If array has odd number of elements then initialize the first element
-		 * as minimum and maximum
-		 */
-		else {
+		}else { //If array has odd number of elements then initialize the first element as minimum and maximum
 			min = arr[0];
 			max = arr[0];
 			i = 1; /* set the startung index for loop */

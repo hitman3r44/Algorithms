@@ -23,7 +23,16 @@ public class SetOfStacks {
 
 	}
 
-	public void push(int v) { /* see earlier code */
+	public void push(int v) {
+		Stack<Integer> last = getLastStack();
+		if (last != null && last.size() != capacity) {
+			last.push(v);
+		} else {
+			Stack<Integer> latest = new Stack<Integer>(capacity);
+			latest.push(v);
+			stacks.add(latest);
+		}
+
 	}
 
 	public int pop() {

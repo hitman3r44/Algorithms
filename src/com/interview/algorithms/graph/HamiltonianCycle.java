@@ -11,6 +11,15 @@ import java.util.Arrays;
  * Hamiltonian Cycle or not. If it contains, then print the path. Following are
  * the input and output of the required function.
  * 
+ * For example, a Hamiltonian Cycle in the following graph is {0, 1, 2, 4, 3, 0}. 
+ * There are more Hamiltonian Cycles in the graph like {0, 3, 4, 2, 1, 0}
+
+(0)--(1)--(2)
+ |   / \   |
+ |  /   \  | 
+ | /     \ |
+(3)-------(4)
+ * 
  * http://en.wikipedia.org/wiki/Hamiltonian_path
  * http://www.geeksforgeeks.org/backtracking-set-7-hamiltonian-cycle/
  * 
@@ -23,12 +32,12 @@ public class HamiltonianCycle {
 	private int[][] graph;
 
 	/** Function to find cycle **/
-	public void findHamiltonianCycle(int[][] g) {
-		V = g.length;
-		path = new int[V];
+	public void findHamiltonianCycle(int[][] g) {	
+		graph = g;
+		path = new int[graph.length];
 
 		Arrays.fill(path, -1);
-		graph = g;
+		
 		try {
 			path[0] = 0;
 			pathCount = 1;
@@ -43,13 +52,13 @@ public class HamiltonianCycle {
 	/** function to find paths recursively **/
 	public void solve(int vertex) throws Exception {
 		/** solution **/
-		if (graph[vertex][0] == 1 && pathCount == V)
+		if (graph[vertex][0] == 1 && pathCount == graph.length)
 			throw new Exception("Solution found");
 		/** all vertices selected but last vertex not linked to 0 **/
-		if (pathCount == V)
+		if (pathCount == graph.length)
 			return;
 
-		for (int v = 0; v < V; v++) {
+		for (int v = 0; v < graph.length; v++) {
 			/** if connected **/
 			if (graph[vertex][v] == 1) {
 				/** add to path **/

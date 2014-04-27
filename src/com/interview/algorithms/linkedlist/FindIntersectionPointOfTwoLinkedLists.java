@@ -82,9 +82,10 @@ public class FindIntersectionPointOfTwoLinkedLists {
 	private static int getLinkedListCount(LinkedList list) {
 		int count = 0;
 		Node currentNode = list.getRootNode();
-		while (currentNode.getNextNode() != null)
+		while (currentNode.getNextNode() != null){
 			count++;
 		currentNode = currentNode.getNextNode();
+		}
 
 		return count++;
 	}

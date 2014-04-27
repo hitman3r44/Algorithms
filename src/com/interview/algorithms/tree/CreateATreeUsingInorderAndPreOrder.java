@@ -20,8 +20,7 @@ import com.example.datastructures.node.BinaryNode;
  */
 public class CreateATreeUsingInorderAndPreOrder {
 
-	private static BinaryNode buildTree(int in[], int pre[], int inStrt,
-			int inEnd) {
+	private static BinaryNode buildTree(int in[], int pre[], int inStrt,int inEnd) {
 		int preIndex = 0;
 
 		if (inStrt > inEnd)

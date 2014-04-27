@@ -1,4 +1,4 @@
-package com.interview.algorithms.search.sorting;
+package com.interview.algorithms.sorting;
 
 import java.util.Arrays;
 
