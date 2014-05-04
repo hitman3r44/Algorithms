@@ -22,8 +22,22 @@ import java.util.Arrays;
  */
 public class ArrayRotation {
 
+	private static void leftRotate(int arr[], int d, int n) {
+		int i;
+		for (i = 0; i < d; i++)
+			leftRotatebyOne(arr, n);
+	}
+
+	private static void leftRotatebyOne(int arr[], int n) {
+		int i, temp;
+		temp = arr[0];
+		for (i = 0; i < n - 1; i++)
+			arr[i] = arr[i + 1];
+		arr[i] = temp;
+	}
+
 	/* Function to left rotate arr[] of siz n by d */
-	static void leftRotate(int arr[], int jump, int size) {
+	static void leftGcdRotate(int arr[], int jump, int size) {
 		int i, j, k, temp;
 		int gcd = gcd(jump, size);
 
@@ -57,7 +71,7 @@ public class ArrayRotation {
 
 	public static void main(String[] args) {
 		int arr[] = { 1, 2, 3, 4, 5, 6, 7 };
-		leftRotate(arr, 2, 7);
+		leftGcdRotate(arr, 2, 7);
 		System.out.println(Arrays.toString(arr));
 
 	}

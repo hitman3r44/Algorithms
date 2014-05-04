@@ -1,6 +1,5 @@
 package com.interview.algorithms.graph;
 
-import com.example.datastructures.Queue;
 import com.example.datastructures.graph.Graph;
 
 /**

@@ -19,7 +19,7 @@ import com.example.datastructures.graph.Graph;
  * @author ajitkoti
  *
  */
-public class DetectCycleInAGraph {
+public class DetectCycleInADirectedGraph {
 
 	private static boolean isCyclicUtil(int start, Graph graph) {
 		graph.getVertexList()[start].wasVisited = true;

@@ -23,6 +23,13 @@ public class FindMissingElementInArray {
 		intArray[index] = value;
 	}
 
+	/**
+	 * if the sum of the numbers goes beyond maximum allowed integer, then there
+	 * can be integer overflow and we may not get correct answer. Method 2 & 3has
+	 * no such problems.
+	 * 
+	 * @return
+	 */
 	private int missingElemntUsingSum() {
 		int sum = 0;
 		int missingNo = -1;
@@ -58,6 +65,20 @@ public class FindMissingElementInArray {
 
 		System.out.println("----------------------------------------- ");
 
+	}
+
+	private void getMissingNo(int a[], int n) {
+		int i;
+		int x1 = a[0]; /* For xor of all the elemets in arary */
+		int x2 = 1; /* For xor of all the elemets from 1 to n+1 */
+
+		for (i = 1; i < n; i++)
+			x1 = x1 ^ a[i];
+
+		for (i = 2; i <= n + 1; i++)
+			x2 = x2 ^ i;
+
+		System.out.println("The missing no is  : " + (x1 ^ x2));
 	}
 
 	public static void main(String[] args) {

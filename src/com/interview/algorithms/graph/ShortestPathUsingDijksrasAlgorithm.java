@@ -2,7 +2,7 @@ package com.interview.algorithms.graph;
 
 import com.example.datastructures.weighted.graph.WeightedGraph;
 
-public class ShortestPath {
+public class ShortestPathUsingDijksrasAlgorithm {
 
 	private static WeightedGraph graph;
 	private static int currentVert; // current vertex
